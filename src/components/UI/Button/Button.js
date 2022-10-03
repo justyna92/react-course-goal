@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-/* 
-styled-components.com to set CSS in the scope of the component
- */
+/* import styled from 'styled-components';
+
+// styled-components.com to set CSS in the scope of the component
+
 const Button = styled.button`
   width: 100%;
   font: inherit;
@@ -26,16 +26,19 @@ const Button = styled.button`
     border-color: #ac0e77;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
   }
-`;
+`; */
 
-/* import './Button.css';
+// Using CSS Modules Stylesheet
+import React from 'react';
+
+import styles from './Button.module.css';
 
 const Button = (props) => {
   return (
-    <button type={props.type} className="button" onClick={props.onClick}>
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
       {props.children}
     </button>
   );
-}; */
+};
 
 export default Button;
